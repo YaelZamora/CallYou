@@ -13,6 +13,10 @@
 		7E4BA0FE2ABE082D00A67B5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E4BA0FC2ABE082D00A67B5B /* Main.storyboard */; };
 		7E4BA1002ABE082F00A67B5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E4BA0FF2ABE082F00A67B5B /* Assets.xcassets */; };
 		7E4BA1032ABE082F00A67B5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E4BA1012ABE082F00A67B5B /* LaunchScreen.storyboard */; };
+		7E4BA10C2ABE094400A67B5B /* AgoraAppGroupDataHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 7E4BA10B2ABE094400A67B5B /* AgoraAppGroupDataHelper */; };
+		7E4BA10E2ABE094400A67B5B /* AgoraBroadcastExtensionHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 7E4BA10D2ABE094400A67B5B /* AgoraBroadcastExtensionHelper */; };
+		7E4BA1102ABE094400A67B5B /* AgoraUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7E4BA10F2ABE094400A67B5B /* AgoraUIKit */; };
+		7E4BA1122ABE23EE00A67B5B /* tokenGenerator.py in Resources */ = {isa = PBXBuildFile; fileRef = 7E4BA1112ABE23EE00A67B5B /* tokenGenerator.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,7 @@
 		7E4BA0FF2ABE082F00A67B5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E4BA1022ABE082F00A67B5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E4BA1042ABE082F00A67B5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E4BA1112ABE23EE00A67B5B /* tokenGenerator.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = tokenGenerator.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E4BA10C2ABE094400A67B5B /* AgoraAppGroupDataHelper in Frameworks */,
+				7E4BA10E2ABE094400A67B5B /* AgoraBroadcastExtensionHelper in Frameworks */,
+				7E4BA1102ABE094400A67B5B /* AgoraUIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +67,7 @@
 				7E4BA0F62ABE082D00A67B5B /* AppDelegate.swift */,
 				7E4BA0F82ABE082D00A67B5B /* SceneDelegate.swift */,
 				7E4BA0FA2ABE082D00A67B5B /* ViewController.swift */,
+				7E4BA1112ABE23EE00A67B5B /* tokenGenerator.py */,
 				7E4BA0FC2ABE082D00A67B5B /* Main.storyboard */,
 				7E4BA0FF2ABE082F00A67B5B /* Assets.xcassets */,
 				7E4BA1012ABE082F00A67B5B /* LaunchScreen.storyboard */,
@@ -83,6 +92,11 @@
 			dependencies = (
 			);
 			name = CallYou;
+			packageProductDependencies = (
+				7E4BA10B2ABE094400A67B5B /* AgoraAppGroupDataHelper */,
+				7E4BA10D2ABE094400A67B5B /* AgoraBroadcastExtensionHelper */,
+				7E4BA10F2ABE094400A67B5B /* AgoraUIKit */,
+			);
 			productName = CallYou;
 			productReference = 7E4BA0F32ABE082D00A67B5B /* CallYou.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 7E4BA0EA2ABE082D00A67B5B;
+			packageReferences = (
+				7E4BA10A2ABE094400A67B5B /* XCRemoteSwiftPackageReference "VideoUIKit-iOS" */,
+			);
 			productRefGroup = 7E4BA0F42ABE082D00A67B5B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +144,7 @@
 			files = (
 				7E4BA1032ABE082F00A67B5B /* LaunchScreen.storyboard in Resources */,
 				7E4BA1002ABE082F00A67B5B /* Assets.xcassets in Resources */,
+				7E4BA1122ABE23EE00A67B5B /* tokenGenerator.py in Resources */,
 				7E4BA0FE2ABE082D00A67B5B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,11 +313,14 @@
 				DEVELOPMENT_TEAM = VP5MJD3LR4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CallYou/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Quiero verte bb";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Yamete Kudasai";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,11 +344,14 @@
 				DEVELOPMENT_TEAM = VP5MJD3LR4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CallYou/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Quiero verte bb";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Yamete Kudasai";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +387,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7E4BA10A2ABE094400A67B5B /* XCRemoteSwiftPackageReference "VideoUIKit-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AgoraIO-Community/VideoUIKit-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7E4BA10B2ABE094400A67B5B /* AgoraAppGroupDataHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E4BA10A2ABE094400A67B5B /* XCRemoteSwiftPackageReference "VideoUIKit-iOS" */;
+			productName = AgoraAppGroupDataHelper;
+		};
+		7E4BA10D2ABE094400A67B5B /* AgoraBroadcastExtensionHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E4BA10A2ABE094400A67B5B /* XCRemoteSwiftPackageReference "VideoUIKit-iOS" */;
+			productName = AgoraBroadcastExtensionHelper;
+		};
+		7E4BA10F2ABE094400A67B5B /* AgoraUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E4BA10A2ABE094400A67B5B /* XCRemoteSwiftPackageReference "VideoUIKit-iOS" */;
+			productName = AgoraUIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7E4BA0EB2ABE082D00A67B5B /* Project object */;
 }
